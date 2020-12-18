@@ -1,4 +1,8 @@
 module.exports = {
+  siteMetadata: {
+    title: `Good Box`,
+    description: `  `,
+  },
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
