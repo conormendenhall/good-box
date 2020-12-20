@@ -24,14 +24,9 @@ export default function Layout({ children }) {
       </Helmet>
       <nav className="navbar">
         <div className="container">
-          <div className="navbar-brand">
-            <a href="#" className="navbar-item">
-              {site.siteMetadata.title}
-            </a>
-          </div>
           <div id="navbarMenuHeroA" className="navbar-menu">
             <div className="navbar-end">
-              <a href="#sendABox" className="navbar-item is-active">
+              <a href="#sendABox" className="navbar-item">
                 Send a Box
               </a>
               <a href="#partners" className="navbar-item">
