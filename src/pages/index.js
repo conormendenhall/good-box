@@ -35,24 +35,30 @@ const IndexPage = () => {
               you, be it bag or bin!
               <br /> Just please make sure you wrap each kit individually.
             </p>
-            <div class="tile is-ancestor">
-              <div class="tile is-parent">
-                <h5 className="title is-5">
-                  School supplies for
-                  <br /> Brilliant Detroit
-                </h5>
+            <div className="tile is-ancestor">
+              <div className="tile is-parent">
+                <div className="tile is-child box">
+                  <h5 className="title is-5">
+                    School supplies for
+                    <br /> Brilliant Detroit
+                  </h5>
+                </div>
               </div>
-              <div class="tile is-parent">
-                <h5 className="title is-5">
-                  Hygiene kits for
-                  <br /> Alternatives for Girls
-                </h5>
+              <div className="tile is-parent">
+                <div className="tile is-child box">
+                  <h5 className="title is-5">
+                    Hygiene kits for
+                    <br /> Alternatives for Girls
+                  </h5>
+                </div>
               </div>
-              <div class="tile is-parent">
-                <h5 className="title is-5">
-                  Warming kits for
-                  <br /> The Noah Project
-                </h5>
+              <div className="tile is-parent">
+                <div className="tile is-child box">
+                  <h5 className="title is-5">
+                    Warming kits for
+                    <br /> The Noah Project
+                  </h5>
+                </div>
               </div>
             </div>
           </div>
@@ -65,15 +71,21 @@ const IndexPage = () => {
               supply support?
               <br /> Let us know!
             </p>
-            <div class="tile is-ancestor">
-              <div class="tile is-parent">
-                <h5 className="title is-5">Brilliant Detroit</h5>
+            <div className="tile is-ancestor">
+              <div className="tile is-parent">
+                <div className="tile is-child box">
+                  <h5 className="title is-5">Brilliant Detroit</h5>
+                </div>
               </div>
-              <div class="tile is-parent">
-                <h5 className="title is-5">Alternatives for Girls</h5>
+              <div className="tile is-parent">
+                <div className="tile is-child box">
+                  <h5 className="title is-5">Alternatives for Girls</h5>
+                </div>
               </div>
-              <div class="tile is-parent">
-                <h5 className="title is-5">The Noah Project</h5>
+              <div className="tile is-parent">
+                <div className="tile is-child box">
+                  <h5 className="title is-5">The Noah Project</h5>
+                </div>
               </div>
             </div>
           </div>
