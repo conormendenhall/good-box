@@ -1,15 +1,19 @@
 import * as React from 'react'
-import Layout from '../components/layout'
 import { useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
+
+import Layout from '../components/layout'
 import '../styles/styles.scss'
 
 const IndexPage = () => {
-  const { site } = useStaticQuery(
+  const { logo } = useStaticQuery(
     graphql`
       query {
-        site {
-          siteMetadata {
-            title
+        logo: file(relativePath: { eq: "main.png" }) {
+          childImageSharp {
+            fixed(width: 256, height: 256) {
+              ...GatsbyImageSharpFixed
+            }
           }
         }
       }
@@ -18,15 +22,10 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <main>
-        <section className="hero is-primary is-medium">
-          <div className="hero-body">
-            <div className="container">
-              <h1 className="title is-1">{site.siteMetadata.title}</h1>
-              <h2 className="subtitle">Tagline</h2>
-            </div>
-          </div>
-        </section>
+      <>
+        <div id="logo">
+          <Img fixed={logo.childImageSharp.fixed} alt="Good Box Logo" />
+        </div>
         <section id="sendABox" className="section">
           <div className="container">
             <h2 className="title is-2">Send a Box</h2>
@@ -90,7 +89,7 @@ const IndexPage = () => {
             </div>
           </div>
         </section>
-      </main>
+      </>
     </Layout>
   )
 }

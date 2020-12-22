@@ -1,13 +1,23 @@
 @charset "utf-8";
 
 // Brand colors
-$good-pink: #ec7a72;
+$good-lavendar: #eca5ff;
+$good-salmon: #ff874a;
+$good-yellow: #e9b800;
+$good-blue: #26adc9;
 
 // If need, change your variables before importing Bulma
-$primary: $good-pink;
-$title-color: $good-pink;
+$primary: $good-blue;
+$info: $good-lavendar;
+$success: $good-yellow;
+$title-color: $good-blue;
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Proza+Libre:wght@400;700&display=swap');
+#logo {
+  margin: 0 auto;
+  text-align: center;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700');
 $family-sans-serif: 'Open Sans', sans-serif;
 
 @import '~bulma/bulma.sass';

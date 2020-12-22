@@ -4,6 +4,13 @@ module.exports = {
     description: `  `,
   },
   plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -11,13 +18,15 @@ module.exports = {
         name: `Good Box`,
         short_name: `GoodBox`,
         start_url: `/`,
-        background_color: `#f7f0eb`,
-        theme_color: `#a2466c`,
+        background_color: `#eca5ff`,
+        theme_color: `#26adc9`,
         display: `standalone`,
-        icon: `src/images/icon.png`,
+        icon: `src/images/blue.png`,
       },
     },
     `gatsby-plugin-offline`, // list this after gatsby-plugin-manifest
     `gatsby-plugin-sass`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
   ],
 }
