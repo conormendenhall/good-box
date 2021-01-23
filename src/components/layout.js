@@ -1,14 +1,22 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import { useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql, Link } from 'gatsby'
+import Img from 'gatsby-image'
 
 export default function Layout({ children }) {
-  const { site } = useStaticQuery(
+  const { site, logo } = useStaticQuery(
     graphql`
       query {
         site {
           siteMetadata {
             title
+          }
+        }
+        logo: file(relativePath: { eq: "main.png" }) {
+          childImageSharp {
+            fixed(width: 256, height: 256) {
+              ...GatsbyImageSharpFixed
+            }
           }
         }
       }
@@ -36,6 +44,11 @@ export default function Layout({ children }) {
           </div>
         </div>
       </nav>
+      <Link to="/">
+        <div id="logo">
+          <Img fixed={logo.childImageSharp.fixed} alt="The Good Box Logo" />
+        </div>
+      </Link>
       <main>{children}</main>
       <footer class="footer">
         <div class="content has-text-centered">

@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Good Box`,
+    title: `The Good Box`,
     description: `  `,
   },
   plugins: [
@@ -15,7 +15,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Good Box`,
+        name: `The Good Box`,
         short_name: `GoodBox`,
         start_url: `/`,
         background_color: `#eca5ff`,

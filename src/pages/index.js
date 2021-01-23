@@ -9,13 +9,6 @@ const IndexPage = () => {
   const { logo, brilliantDetroit, altForGirls, noahProject } = useStaticQuery(
     graphql`
       query {
-        logo: file(relativePath: { eq: "main.png" }) {
-          childImageSharp {
-            fixed(width: 256, height: 256) {
-              ...GatsbyImageSharpFixed
-            }
-          }
-        }
         brilliantDetroit: file(
           relativePath: { eq: "partners/brilliant-detroit.jpg" }
         ) {
@@ -47,92 +40,87 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <>
-        <div id="logo">
-          <Img fixed={logo.childImageSharp.fixed} alt="Good Box Logo" />
+      <section id="sendABox" className="section">
+        <div className="container">
+          <h2 className="title is-2">Send a Box</h2>
+          <p className="content">
+            We say "box" but you can really choose whatever vessel works for
+            you, be it bag or bin!
+            <br /> Just please make sure you wrap each kit individually.
+          </p>
+          <div className="tile is-ancestor">
+            <div className="tile is-parent">
+              <div className="tile is-child box">
+                <h5 className="title is-5">
+                  School supplies for
+                  <br /> Brilliant Detroit
+                </h5>
+                <figure class="image">
+                  <Img
+                    fluid={brilliantDetroit.childImageSharp.fluid}
+                    alt="Brilliant Detroit"
+                  />
+                </figure>
+              </div>
+            </div>
+            <div className="tile is-parent">
+              <div className="tile is-child box">
+                <h5 className="title is-5">
+                  Hygiene kits for
+                  <br /> Alternatives for Girls
+                </h5>
+                <figure class="image">
+                  <Img
+                    fluid={altForGirls.childImageSharp.fluid}
+                    alt="Alternatives for Girls"
+                  />
+                </figure>
+              </div>
+            </div>
+            <div className="tile is-parent">
+              <div className="tile is-child box">
+                <h5 className="title is-5">
+                  Warming kits for
+                  <br /> The Noah Project
+                </h5>
+                <figure class="image">
+                  <Img
+                    fluid={noahProject.childImageSharp.fluid}
+                    alt="The Noah Project"
+                  />
+                </figure>
+              </div>
+            </div>
+          </div>
         </div>
-        <section id="sendABox" className="section">
-          <div className="container">
-            <h2 className="title is-2">Send a Box</h2>
-            <p className="content">
-              We say "box" but you can really choose whatever vessel works for
-              you, be it bag or bin!
-              <br /> Just please make sure you wrap each kit individually.
-            </p>
-            <div className="tile is-ancestor">
-              <div className="tile is-parent">
-                <div className="tile is-child box">
-                  <h5 className="title is-5">
-                    School supplies for
-                    <br /> Brilliant Detroit
-                  </h5>
-                  <figure class="image">
-                    <Img
-                      fluid={brilliantDetroit.childImageSharp.fluid}
-                      alt="Brilliant Detroit"
-                    />
-                  </figure>
-                </div>
+      </section>
+      <section id="partners" className="section">
+        <div className="container">
+          <h2 className="title is-2">Partners</h2>
+          <p className="content">
+            Are you a local organization serving our community who could use
+            supply support?
+            <br /> Let us know!
+          </p>
+          <div className="tile is-ancestor">
+            <div className="tile is-parent">
+              <div className="tile is-child box">
+                <h5 className="title is-5">Brilliant Detroit</h5>
               </div>
-              <div className="tile is-parent">
-                <div className="tile is-child box">
-                  <h5 className="title is-5">
-                    Hygiene kits for
-                    <br /> Alternatives for Girls
-                  </h5>
-                  <figure class="image">
-                    <Img
-                      fluid={altForGirls.childImageSharp.fluid}
-                      alt="Alternatives for Girls"
-                    />
-                  </figure>
-                </div>
+            </div>
+            <div className="tile is-parent">
+              <div className="tile is-child box">
+                <h5 className="title is-5">Alternatives for Girls</h5>
               </div>
-              <div className="tile is-parent">
-                <div className="tile is-child box">
-                  <h5 className="title is-5">
-                    Warming kits for
-                    <br /> The Noah Project
-                  </h5>
-                  <figure class="image">
-                    <Img
-                      fluid={noahProject.childImageSharp.fluid}
-                      alt="The Noah Project"
-                    />
-                  </figure>
-                </div>
+            </div>
+            <div className="tile is-parent">
+              <div className="tile is-child box">
+                <h5 className="title is-5">The Noah Project</h5>
               </div>
             </div>
           </div>
-        </section>
-        <section id="partners" className="section">
-          <div className="container">
-            <h2 className="title is-2">Partners</h2>
-            <p className="content">
-              Are you a local organization serving our community who could use
-              supply support?
-              <br /> Let us know!
-            </p>
-            <div className="tile is-ancestor">
-              <div className="tile is-parent">
-                <div className="tile is-child box">
-                  <h5 className="title is-5">Brilliant Detroit</h5>
-                </div>
-              </div>
-              <div className="tile is-parent">
-                <div className="tile is-child box">
-                  <h5 className="title is-5">Alternatives for Girls</h5>
-                </div>
-              </div>
-              <div className="tile is-parent">
-                <div className="tile is-child box">
-                  <h5 className="title is-5">The Noah Project</h5>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </>
+        </div>
+      </section>
     </Layout>
   )
 }
