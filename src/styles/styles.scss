@@ -11,13 +11,29 @@ $primary: $good-blue;
 $info: $good-lavendar;
 $success: $good-yellow;
 $title-color: $good-blue;
+$link: $primary !default;
+$link-focus-border: $primary !default;
 
 #logo {
   margin: 0 auto;
   text-align: center;
 }
 
+$footer-background-color: $good-blue;
+
+footer {
+  color: white;
+  a {
+    color: white;
+  }
+}
+
+.navbar-menu {
+  font-weight: 700;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700');
 $family-sans-serif: 'Open Sans', sans-serif;
 
+// import bulma after overriding defaults above
 @import '~bulma/bulma.sass';
