@@ -55,7 +55,7 @@ const IndexPage = () => {
                   School supplies for
                   <br /> Brilliant Detroit
                 </h5>
-                <figure class="image">
+                <figure className="image">
                   <Img
                     fluid={brilliantDetroit.childImageSharp.fluid}
                     alt="Brilliant Detroit"
@@ -69,7 +69,7 @@ const IndexPage = () => {
                   Hygiene kits for
                   <br /> Alternatives for Girls
                 </h5>
-                <figure class="image">
+                <figure className="image">
                   <Img
                     fluid={altForGirls.childImageSharp.fluid}
                     alt="Alternatives for Girls"
@@ -83,7 +83,7 @@ const IndexPage = () => {
                   Warming kits for
                   <br /> The Noah Project
                 </h5>
-                <figure class="image">
+                <figure className="image">
                   <Img
                     fluid={noahProject.childImageSharp.fluid}
                     alt="The Noah Project"
