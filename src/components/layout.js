@@ -37,6 +37,24 @@ export default function Layout({ children }) {
         </div>
       </nav>
       <main>{children}</main>
+      <footer class="footer">
+        <div class="content has-text-centered">
+          <p>
+            Contact us:{' '}
+            <strong>
+              <a href="mailto:info@goodboxdetroit.org">
+                info@goodboxdetroit.org
+              </a>
+            </strong>
+          </p>
+          <p>
+            Site by:{' '}
+            <strong>
+              <a href="https://github.com/conormendenhall">Conor Mendenhall</a>
+            </strong>
+          </p>
+        </div>
+      </footer>
     </>
   )
 }
