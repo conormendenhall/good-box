@@ -6,7 +6,7 @@ import Layout from '../components/layout'
 import '../styles/styles.scss'
 
 const IndexPage = () => {
-  const { logo, brilliantDetroit, altForGirls, noahProject } = useStaticQuery(
+  const { brilliantDetroit, altForGirls, noahProject } = useStaticQuery(
     graphql`
       query {
         brilliantDetroit: file(
