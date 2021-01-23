@@ -6,13 +6,38 @@ import Layout from '../components/layout'
 import '../styles/styles.scss'
 
 const IndexPage = () => {
-  const { logo } = useStaticQuery(
+  const { logo, brilliantDetroit, altForGirls, noahProject } = useStaticQuery(
     graphql`
       query {
         logo: file(relativePath: { eq: "main.png" }) {
           childImageSharp {
             fixed(width: 256, height: 256) {
               ...GatsbyImageSharpFixed
+            }
+          }
+        }
+        brilliantDetroit: file(
+          relativePath: { eq: "partners/brilliant-detroit.jpg" }
+        ) {
+          childImageSharp {
+            fluid(maxWidth: 400) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        altForGirls: file(
+          relativePath: { eq: "partners/alternatives-for-girls.jpg" }
+        ) {
+          childImageSharp {
+            fluid(maxWidth: 400) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        noahProject: file(relativePath: { eq: "partners/noah-project.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 400) {
+              ...GatsbyImageSharpFluid
             }
           }
         }
@@ -41,6 +66,12 @@ const IndexPage = () => {
                     School supplies for
                     <br /> Brilliant Detroit
                   </h5>
+                  <figure class="image">
+                    <Img
+                      fluid={brilliantDetroit.childImageSharp.fluid}
+                      alt="Brilliant Detroit"
+                    />
+                  </figure>
                 </div>
               </div>
               <div className="tile is-parent">
@@ -49,6 +80,12 @@ const IndexPage = () => {
                     Hygiene kits for
                     <br /> Alternatives for Girls
                   </h5>
+                  <figure class="image">
+                    <Img
+                      fluid={altForGirls.childImageSharp.fluid}
+                      alt="Alternatives for Girls"
+                    />
+                  </figure>
                 </div>
               </div>
               <div className="tile is-parent">
@@ -57,6 +94,12 @@ const IndexPage = () => {
                     Warming kits for
                     <br /> The Noah Project
                   </h5>
+                  <figure class="image">
+                    <Img
+                      fluid={noahProject.childImageSharp.fluid}
+                      alt="The Noah Project"
+                    />
+                  </figure>
                 </div>
               </div>
             </div>
