@@ -3,6 +3,8 @@ import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
 
+import '../styles/styles.scss'
+
 export default function Layout({ children }) {
   const { site, logo } = useStaticQuery(
     graphql`
@@ -49,7 +51,7 @@ export default function Layout({ children }) {
           <Img fixed={logo.childImageSharp.fixed} alt="The Good Box Logo" />
         </div>
       </Link>
-      <main>{children}</main>
+      <main className="container">{children}</main>
       <footer className="footer">
         <div className="content has-text-centered">
           <p>
@@ -58,6 +60,12 @@ export default function Layout({ children }) {
               <a href="mailto:info@goodboxdetroit.org">
                 info@goodboxdetroit.org
               </a>
+            </strong>
+          </p>
+          <p>
+            Branding by:{' '}
+            <strong>
+              <a href="https://www.lindsayfarris.com/">Lindsay Farris</a>
             </strong>
           </p>
           <p>
