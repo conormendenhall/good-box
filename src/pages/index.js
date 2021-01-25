@@ -47,8 +47,8 @@ const IndexPage = () => {
           <br /> Just please make sure you wrap each kit individually.
         </p>
         <div className="tile is-ancestor">
-          <Link to="partners/brilliant-detroit" className="tile is-parent">
-            <div className="tile is-child box">
+          <div className="tile is-parent">
+            <Link to="partners/brilliant-detroit" className="tile is-child box">
               <h5 className="title is-5">
                 School supplies for
                 <br /> Brilliant Detroit
@@ -59,10 +59,10 @@ const IndexPage = () => {
                   alt="Brilliant Detroit"
                 />
               </figure>
-            </div>
-          </Link>
-          <Link to="partners/alternatives-for-girls" className="tile is-parent">
-            <div className="tile is-child box">
+            </Link>
+          </div>
+          <div className="tile is-parent">
+            <Link to="partners/alternatives-for-girls" className="tile is-child box">
               <h5 className="title is-5">
                 Hygiene kits for
                 <br /> Alternatives for Girls
@@ -73,13 +73,13 @@ const IndexPage = () => {
                   alt="Alternatives for Girls"
                 />
               </figure>
-            </div>
-          </Link>
-          <Link to="partners/noah-project" className="tile is-parent">
-            <div className="tile is-child box">
+            </Link>
+          </div>
+          <div className="tile is-parent">
+            <Link to="partners/noah-project" className="tile is-child box">
               <h5 className="title is-5">
                 Warming kits for
-                <br /> The Noah Project
+                <br /> The NOAH Project
               </h5>
               <figure className="image">
                 <Img
@@ -87,8 +87,8 @@ const IndexPage = () => {
                   alt="The Noah Project"
                 />
               </figure>
-            </div>
-          </Link>
+            </Link>
+          </div>
         </div>
       </section>
       <section id="partners" className="section">

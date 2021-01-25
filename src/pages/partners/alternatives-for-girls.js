@@ -5,7 +5,7 @@ import Partner from '../../components/partner'
 
 const AlternativesForGirls = () => {
   let alternativesForGirls = {
-    title: 'Alternatives For Girls',
+    title: 'Hygiene kits for Alternatives For Girls',
   }
 
   return (

@@ -5,7 +5,7 @@ import Partner from '../../components/partner'
 
 const NoahProject = () => {
   let noahProject = {
-    title: 'The NOAH Project',
+    title: 'Warming kits for The NOAH Project',
   }
 
   return (
